@@ -1,5 +1,5 @@
-<div class="container ">
-    <div class="row g-4 my-3">
+<div class="container py-5">
+    <div class="row g-4 my-3 pt-5">
         <div *ngFor="let item of brandList " class="col-md-4 ">
             <div (click)="getSelectedBrands(item?._id)" class="card brands" style="width: 18rem;">
                 <img [src]="item?.image" class="card-img-top border-bottom" alt="...">

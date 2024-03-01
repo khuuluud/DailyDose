@@ -26,7 +26,7 @@ export class WishlistService implements OnInit {
    }
 
   ngOnInit(): void {
-    
+   
   }
 
 addToWishList(id:string):Observable<any>{

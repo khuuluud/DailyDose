@@ -3,11 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../../services/products.service';
 import { Products } from '../../interfaces/products';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CartService } from 'src/app/services/cart.service';
 import { ToastrService } from 'ngx-toastr';
 import { WishlistService } from 'src/app/services/wishlist.service';
-import { style } from '@angular/animations';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -129,7 +128,6 @@ if(!this.isStored[Id]){
         this.wishListToggle(Id)
         this.toastr.success(response.message)
         
-       
       },
       error: (err) => {
         console.log(err);
@@ -144,7 +142,7 @@ if(!this.isStored[Id]){
       next:(response)=>{
         this.wishItem = response.data
         this._wish.wishNumber.next(response.count)
-        console.log(response);
+        
         
       },
       error:(err)=>{console.log(err);
