@@ -128,7 +128,7 @@ if(!this.isStored[Id]){
         this.wishListToggle(Id)
         this.toastr.success(response.message , '', {
           closeButton: true,
-          disableTimeOut: true
+        
         })
         
       },
