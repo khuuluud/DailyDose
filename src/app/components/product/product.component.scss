@@ -1,0 +1,34 @@
+.fav-icon {
+    top: 0;
+    right: -35px;
+    border: 1px solid transparent;
+    width: 32px;
+    height: 32px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 3px 8px rgba(0, 0, 0, 0.12);
+    transition: transform 0.5s;
+    transition: all 0.5s;
+}
+
+.col-md-3:hover {
+    .fav-icon {
+        transform: translatex(-40px);
+
+
+    }
+}
+
+.fav-icon:hover {
+    background-color: #731EC8;
+    color: white;
+}
+
+.product {
+
+    transition: all 0.5s;
+}
+.form-control:focus{
+    border-color: #731EC8;
+    box-shadow: 1px 1px 10px #731ec866;
+}

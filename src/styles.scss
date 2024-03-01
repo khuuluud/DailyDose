@@ -1,0 +1,115 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$E-Commerce-primary: mat.define-palette(mat.$indigo-palette);
+$E-Commerce-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$E-Commerce-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$E-Commerce-theme: mat.define-light-theme((
+  color: (
+    primary: $E-Commerce-primary,
+    accent: $E-Commerce-accent,
+    warn: $E-Commerce-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($E-Commerce-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+
+  $bgColor:#731EC8;
+  $lightBgColor:#f0f3f2;
+  $shadow: 1px 1px 10px #731ec866;
+  $fontFamily:'Encode Sans Expanded', sans-serif;
+  $ratingColor:#ffc908;
+
+
+body{
+font-family: $fontFamily;
+background-color: #f8f9fa;
+}
+.rating-color
+{
+  color:$ratingColor;
+}
+
+.cursor-pointer
+{
+    cursor: pointer;
+}
+
+.product{
+  transition: all 0.4s;
+}
+.product:hover{
+box-shadow: $shadow !important;
+border:0px solid transparent;
+}
+
+.product .btn{
+  opacity: 0 !important;
+  transition:transform 1s ,opacity 1s !important;
+  transform: translateY(100%) !important;
+}
+.product:hover .btn{
+  opacity: 1 !important;
+  transform: translateY(0%) !important;
+}
+a , a:hover{
+  color: black;
+  text-decoration: none;
+}
+
+.text-main
+{
+    color:$bgColor;
+}
+.font-sm
+{
+    font-size: 14px;
+}
+.bg-main
+{
+    background-color:$bgColor !important;
+}
+.bg-main-light 
+{
+    background-color: $lightBgColor !important;
+}
+// #toast-container{
+//   background-color: #731EC8 !important;
+//   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 3px 8px rgba(0, 0, 0, 0.12)!important;
+// }
+
+.btn-outline-danger{
+  color: #731EC8;
+  border-color: #731EC8;
+  transition: all 0.5s;
+}
+.btn-outline-danger:hover{
+  background-color: #731EC8;
+  color: white;
+  border-color: #731EC8;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
