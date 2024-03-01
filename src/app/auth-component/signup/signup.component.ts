@@ -24,17 +24,7 @@ rePassword: new FormControl(null),
 phone: new FormControl(null,[Validators.required,Validators.pattern(/^(002)?(01)[0125][0-9]{8}$/)])
 },{validators:[this.confirmPassword]} as FormControlOptions)
 
-// confirmPassword(group:FormGroup):void{
-// let password = group.get('password');
-// let rePassword = group.get('rePassword');
-// if(rePassword?.value == ''){
-//   rePassword.setErrors({required:true})
-// }else if(password?.value !== rePassword?.value){
-//   rePassword?.setErrors({notMatch:true})
-// }
-  
 
-// }
 
 confirmPassword(group:FormGroup):void{
 let password = group.get('password');
@@ -65,6 +55,14 @@ this.isLoading = false;
   })
 }
 
+}
+
+visible:boolean = true;
+changetype:boolean = true;
+
+viewPass(){
+ this.visible = !this.visible
+ this.changetype = !this.changetype
 }
 
 
