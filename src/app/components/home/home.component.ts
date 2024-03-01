@@ -126,7 +126,10 @@ if(!this.isStored[Id]){
       next: (response) => {
         this._wish.wishNumber.next(response.count);
         this.wishListToggle(Id)
-        this.toastr.success(response.message)
+        this.toastr.success(response.message , '', {
+          closeButton: true,
+          disableTimeOut: true
+        })
         
       },
       error: (err) => {
