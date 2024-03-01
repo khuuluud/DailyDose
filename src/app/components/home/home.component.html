@@ -49,7 +49,7 @@
                 </div>
                 <div class=" p-2" [routerLink]="['/productDetails',product._id]">
                     <img [src]="product?.imageCover" class="w-100" [alt]="product?.title">
-                    <p class="text-main">{{product?.category?.name}}</p>
+                    <p class="text-main pt-2 ">{{product?.category?.name}}</p>
                     <div class="d-flex justify-content-between ">
                         <p>{{product?.price}}EGP</p>
                         <p>{{product?.ratingsAverage}} <i class="fa-solid fa-star rating-color"></i> </p>

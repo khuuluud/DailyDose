@@ -15,6 +15,7 @@
 body{
 font-family: $fontFamily;
 background-color: #f8f9fa;
+// font-weight: bold;
 }
 .rating-color
 {
@@ -68,10 +69,7 @@ a , a:hover{
   background-color: #731EC8 !important;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 3px 8px rgba(0, 0, 0, 0.12)!important;
 }
-// .toast-success{
-//   background-color: #731EC8 !important;
-//   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 3px 8px rgba(0, 0, 0, 0.12)!important;
-// }
+
 .btn-outline-danger{
   color: #731EC8;
   border-color: #731EC8;
