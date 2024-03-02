@@ -33,9 +33,9 @@ deleteMywishListItem(id:string){
   this._wish.deletMyWishList(id).subscribe({
     next:(response)=>{
       this.wishItem = response.data
-      this._wish.wishNumber.next(response.count)
+      this._wish.wishNumber.next(response.data.length)
       this.getMyWishList()
-      console.log(response);
+      
       
     },
     error:(err)=>{console.log(err);
