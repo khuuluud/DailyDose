@@ -23,12 +23,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
 
-const stored = localStorage.getItem('wishList');
-    if(stored){
-      this.isStored = JSON.parse(stored);
-    }
-
-
     this._product.getProducts().subscribe({
       next: (response) => {
         this.productList = response.data;
@@ -139,13 +133,12 @@ if(!this.isStored[id]){
   addToMyWishList(Id: string) {
     this._wish.addToWishList(Id).subscribe({
       next: (response) => {
-        this._wish.wishNumber.next(response.count);
+        this._wish.wishNumber.next(response.data.length);
         this.wishListToggle(Id)
         this.toastr.success(response.message , '', {
           closeButton: true,
         
-        })
-        
+        })  
       },
       error: (err) => {
         console.log(err);
