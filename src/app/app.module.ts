@@ -26,11 +26,7 @@ import { CheckoutpaymentComponent } from './components/checkoutpayment/checkoutp
 import { AllordersComponent } from './components/allorders/allorders.component';
 import { SalePipe } from './sale.pipe';
 import { SearchPipe } from './search.pipe';
-import {MatCardModule} from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 
 @NgModule({
@@ -65,11 +61,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     ToastrModule.forRoot(),
     HttpClientModule,
     FormsModule,
-    MatCardModule,
-    MatIconModule,
-    MatButtonModule,
-    MatInputModule,
-    MatFormFieldModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

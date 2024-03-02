@@ -1,8 +1,8 @@
 <div class="container py-5 my-5">
     <div class="row">
         <h2 class="fw-bold my-5 text-center"> All Orders..</h2>
-        <div *ngFor="let order of orderList; " class="col-md-12 m-auto  bg-light shadow p-5">
-            <div *ngFor="let details of orderDetailsList" class="row my-3 border-bottom">
+        <div *ngFor="let details of orderDetailsList" class="col-md-12 m-auto  bg-light shadow p-5">
+            <div  class="row my-3 border-bottom">
                 <div class="col-md-2 mb-5">
                     <img [src]="details?.product?.imageCover" alt="" class="w-100 ">
                 </div>
@@ -14,7 +14,7 @@
                     <div class="">
                         <p><span class=" text-main">Brand:</span> {{details?.product?.brand?.name}}</p>
                         <p><span class=" text-main">Quantity:</span>{{details?.count}}</p>
-                        <p><span class="fw-bold text-main">CreateDate:</span> {{order?.createdAt}}</p>
+                        <p><span class="fw-bold text-main">CreateDate:</span> {{details?.createdAt}}</p>
                        
                     </div>
                 </div>

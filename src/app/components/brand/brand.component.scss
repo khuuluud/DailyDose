@@ -1,12 +1,9 @@
-.fixed-top{
-    top: 100px;
-    left: 400px;
-    border:1px solid #731EC8;
-}
+
 
 
 #getDetails{
-  cursor: pointer;
+ background-color: rgba(0, 0, 0, 0.221) !important;
+
 }
 .brands{
   cursor: pointer;
@@ -16,4 +13,7 @@ transition: all 0.5s;
 }
 .brands:hover{
   border: 1px solid #731EC8;
+}
+#close-btn{
+    cursor: pointer;
 }

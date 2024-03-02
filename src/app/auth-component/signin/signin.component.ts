@@ -12,12 +12,16 @@ export class SigninComponent {
   error!: string;
   isLoading: boolean = false;
 
-  
-  
-  
+
+
+
 
   constructor(private _auth: AuthService, private _Route: Router) { }
 
+
+
+
+  
   loginForm: FormGroup = new FormGroup({
     email: new FormControl(null, [Validators.required, Validators.email]),
     password: new FormControl(null, [Validators.required, Validators.pattern(/^[A-Z][a-z0-9]{4,8}$/)]),
@@ -44,12 +48,17 @@ export class SigninComponent {
     }
 
   }
-  visible:boolean = true;
-  changetype:boolean = true;
+  visible: boolean = true;
+  changetype: boolean = true;
 
-  viewPass(){
-   this.visible = !this.visible
-   this.changetype = !this.changetype
+  viewPass() {
+    this.visible = !this.visible
+    this.changetype = !this.changetype
+    console.log(this.visible);
+   
+
   }
+
+
 
 }

@@ -1,27 +1,30 @@
-<div class="container py-5">
-    <div class="row g-4 my-3 pt-5">
-        <div *ngFor="let item of brandList " class="col-md-4 ">
-            <div (click)="getSelectedBrands(item?._id)" class="card brands" style="width: 18rem;">
-                <img [src]="item?.image" class="card-img-top border-bottom" alt="...">
-                <div class="card-body ">
-                    <p class="card-text text-center text-main fw-bold">{{item?.name}}</p>
-                   
+<div class="w-100 m-auto">
+    <div class="container py-5">
+        <div class="row gy-3 my-3 pt-5">
+            <div *ngFor="let item of brandList" class="col-md-4">
+                <div (click)="getSelectedBrands(item?._id)" class="card brands">
+                    <img [src]="item?.image" class="card-img-top border-bottom w-100" alt="...">
+                    <div class="card-body ">
+                        <p class="card-text text-center text-main fw-bold">{{item?.name}}</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-  <div id="getDetails" class="card fixed-top text-center d-none" style="width: 25rem;">
-    <div (click)="closeBtn()" class="close border-bottom d-flex justify-content-end ">
-        <i  class="fa-solid fa-circle-xmark my-2 mx-2 d-flex justify-content-end"></i>
+
+
+<div id="getDetails" class="d-none vh-100  fixed-top">
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card  text-center w-25">
+            <div (click)="closeBtn()" class="close border-bottom d-flex justify-content-end ">
+                <i id="close-btn" class="fa-solid fa-circle-xmark my-2 mx-2 d-flex justify-content-end"></i>
+            </div>
+            <img [src]="selectedBrand?.image" [alt]="selectedBrand?.name" class="border-bottom w-100">
+            <div class="card-body">
+                <p class="card-text fw-bold">{{selectedBrand?.name}}</p>
+            </div>
+        </div>
     </div>
-    <img [src]="selectedBrand?.image" [alt]="selectedBrand?.name" class="border-bottom">
-    <div class="card-body">
-      <p class="card-text fw-bold">{{selectedBrand?.name}}</p>
-    </div>
-  </div>
-
-
-
-
+</div>

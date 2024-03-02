@@ -18,9 +18,10 @@
                         <div class="col-md-12  ">
                             <label class="position fw-bold">Password :</label>
                             <div class="d-flex justify-content-end align-items-center position-relative">
-                                <input [type]="changetype?'password':'text'" formControlName="password" id="user-Pw" class="form-control"  >
-                                    <span class="eye-icon position-absolute px-2" (click)="viewPass()"><i [ngClass]="visible ?'fa-solid fa-eye-slash':'fa-solid fa-eye'"></i></span>
-                            </div>
+                                <input [type]="changetype?'password':'text'" formControlName="password" id="user-Pw"
+                                    class="form-control">
+                                <span class="eye-icon position-absolute px-2" (click)="viewPass()"><i [ngClass]="visible ?'fa-solid fa-eye-slash':'fa-solid fa-eye'"></i></span>
+                                 </div>
                             <div *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched">
                                 <p *ngIf="loginForm.get('password')?.getError('required')" class="text-danger">Enter
                                     your password</p>

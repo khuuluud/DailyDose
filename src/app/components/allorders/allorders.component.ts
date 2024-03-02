@@ -23,9 +23,7 @@ orderDetailsList:any[]=[];
       next: (response) => {
        
         for (let i = 0; i < response.length; i++) {
-          this.orderList.push(response[i]);
-          console.log(response[i]);
-          
+       
           for(let y = 0; y < response[i].cartItems.length; y++){
             this.orderDetailsList.push(response[i].cartItems[y])
           }

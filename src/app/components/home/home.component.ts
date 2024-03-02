@@ -22,6 +22,13 @@ export class HomeComponent implements OnInit {
   wishItem:any;
 
   ngOnInit(): void {
+
+const stored = localStorage.getItem('wishList');
+    if(stored){
+      this.isStored = JSON.parse(stored);
+    }
+
+
     this._product.getProducts().subscribe({
       next: (response) => {
         this.productList = response.data;
@@ -31,6 +38,8 @@ export class HomeComponent implements OnInit {
       }
     })
     this.getCategory()
+
+
   }
 
   categoryList: any[] = [];
@@ -53,6 +62,9 @@ export class HomeComponent implements OnInit {
     pullDrag: true,
     dots: false,
     navSpeed: 700,
+    autoplay: true,
+    autoplayTimeout: 4000,
+    autoplaySpeed: 1000,
     navText: ['', ''],
     responsive: {
       0: {
@@ -78,7 +90,9 @@ export class HomeComponent implements OnInit {
     pullDrag: true,
     dots: false,
     navSpeed: 700,
-     
+     autoplay: true,
+     autoplayTimeout: 2000,
+     autoplaySpeed: 1000,
     navText: ['', ''],
     responsive: {
       0: {
@@ -113,11 +127,11 @@ export class HomeComponent implements OnInit {
 
 isStored:{[Id:string]:boolean} = {};
 
-wishListToggle(Id:string){
-this.isStored[Id] = !this.isStored[Id]   
+wishListToggle(id:string){
+this.isStored[id] = !this.isStored[id]   
 localStorage.setItem('wishList',JSON.stringify(this.isStored))
-if(!this.isStored[Id]){
- this.deleteMywishListItem(Id)
+if(!this.isStored[id]){
+ this.deleteMywishListItem(id)
 
 }
 
@@ -155,7 +169,10 @@ if(!this.isStored[Id]){
   }
 
 
+  }
 
 
 
-}
+
+
+
